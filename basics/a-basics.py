@@ -6,7 +6,7 @@ use CTRL+/ to uncomment the block
 """
 
 # print a test line
-print("This line will be printed.")
+# print("This line will be printed.")
 
 """
 Variables, and setting the value of a variable
@@ -30,23 +30,22 @@ you can check the value of x by printing it.
 """
 
 # print(x)
-# print('the value of x is', x)
+print('the value of x is', x)
 
 """
 you can change the value stored in a variable
 """
-# print('\nchanging value example:')
-# x = 2
-# print('the value of x is now', x)
+print('\nchanging value example:')
+x = 2
+print('the value of x is now', x)
 
 
 """
 you can assign a variable to ANOTHER variable
 """
 
-# z = x
-#
-# print('the value of z is ', z)
+z = x
+print('the value of z is ', z)
 
 """
 leading spaces and indentations are IMPORTANT for python.
@@ -63,11 +62,11 @@ For example, this print statement will fail because it is indented for no reason
 Indentation is used to mark a subsection such as a condition, or a loop.
 The beginning of a subsection is marked with a colon ":"
 """
-# x=1
-# if x == 1:
-#     # indented 4 spaces, or a tab in pycharm
-#     print('\nindenting test:')
-#     print('x was found to be equal to 1')
+x=1
+if x == 1:
+    # indented 4 spaces, or a tab in pycharm
+    print('\nindenting test:')
+    print('x was found to be equal to 1')
 
 """
 EXERCISE

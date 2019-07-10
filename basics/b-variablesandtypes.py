@@ -10,11 +10,11 @@ You need to define the value of a variable before you ask the computer to use th
 See how we correct the error below
 """
 
-# my_first_variable = 1
+my_first_variable = 1
 
-my_first_variable + 5
+my_first_variable = my_first_variable + 5
 
-print(my_first_variable)
+print('my first variable is' ,my_first_variable)
 
 
 
@@ -33,19 +33,19 @@ Numbers are either integers (int) or floating-point (float)
 This is just how they are stored, because of the decimal place.
 """
 
-# print('\nthis is an example of an integer')
-# i = 5
-# print('a =', i, type(i))
+print('\nthis is an example of an integer')
+i = 5
+print('i =', i, type(i))
 #
-# print('\nthis is an example of a float')
-# f = 5.0
-# print('f = ', f, type(f))
+print('\nthis is an example of a float')
+f = 5.0
+print('f = ', f, type(f))
 
 """
 Python does math ok with a mix of integers and floats
 """
 
-# print('\naddition = ', i + f)
+print('\naddition = ', i + f)
 
 """
 but often you cannot interchange int and float 
@@ -61,8 +61,8 @@ Logic tells you that you cannot specify a fraction for the number of decimal pla
 # rounded_result = round(10.123456, 4)
 #
 # print('\nrounded result = ', rounded_result)
-#
-# rounded_result = round(10.123456, 4.5)
+
+# rounded_result = round(10.123456, 4.0)
 #
 # print('\nsecond rounded result = ', rounded_result)
 
@@ -76,7 +76,7 @@ if the function recognises it as a float, it will complain.
 """
 
 # rounded_result = round(10.123456, float(4))
-#
+# #
 # print('\nthird rounded result = ', rounded_result)
 
 """
@@ -84,11 +84,15 @@ STRINGS
 Used to store text
 """
 
-s = 'this is a string'
-s = "this is a string"
-s = '''this is a string'''
+s1 = 'this is a string'
+s2 = "this is a string"
+s3 = '''this "is a" string'''
+s4 = "this '''is a''' string"
 
-# print('\n example of a string = ', s, type(s))
+print('\n example of a string = ', s1, type(s1))
+print('\n example of a string = ', s2, type(s2))
+print('\n example of a string = ', s3, type(s3))
+print('\n example of a string = ', s4, type(s4))
 
 blank = ''
 
@@ -98,9 +102,9 @@ blank = ''
 You can "add" strings together
 """
 
-joined_string = s + 'with another string joined'
+joined_string = s1 + 'with another string joined'
 
-# print('\n example of adding strings = ', joined_string, type(joined_string))
+print('\n example of adding strings = ', joined_string, type(joined_string))
 
 """
 Be careful with the spaces!
@@ -113,23 +117,24 @@ This data type makes it really efficient to compare different values.
 Either True or False
 
 the double equals "==" is used to compare between two objects
+"!="
 the single equals "=" is used to set a value
 
 """
 
-# boolean_variable = True
-# boolean_variable = False
+boolean_variable = True
+boolean_variable = False
 
-# print ('\nboolean variable: ', boolean_variable, type(boolean_variable))
+print ('\nboolean variable: ', boolean_variable, type(boolean_variable))
 
-# x = 1
-# bool_comparison = x == 1
+x = 1
+bool_comparison = x == 1
 
-# print ('\nbool comparison to a correct value: ', bool_comparison, type(bool_comparison))
+print ('\nbool comparison to a correct value: ', bool_comparison, type(bool_comparison))
 
-# bool_comparison = x == 'string'
+bool_comparison = x == 'some text'
 
-# print ('\nbool comparison to a wrong value: ', bool_comparison, type(bool_comparison))
+print ('\nbool comparison to a wrong value: ', bool_comparison, type(bool_comparison))
 
 """
 EXERCISE
@@ -142,7 +147,7 @@ EXERCISE
 
 6. define a second variable and give it a value of 'omics is awesome'
 7. to this, add a string of ' and fun too!'
-8. print out the variable to check you answer 
+8. print out the variable to check your answer 
 
 """
 
