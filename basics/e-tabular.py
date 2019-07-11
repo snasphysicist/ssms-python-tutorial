@@ -7,6 +7,12 @@ The scientist often deals with data tables in text or excel.
 
 Pandas is a great way to import and manipulate tabular data
 
+You can install it from the TERMINAL using the command:
+
+pip install pandas
+
+Go ahead and try.
+
 """
 
 import pandas as pd
