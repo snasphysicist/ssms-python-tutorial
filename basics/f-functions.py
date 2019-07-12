@@ -23,41 +23,42 @@ Don't worry if you don't get this - functions take several attempts
 to understand. The work we will be doing can be done without custom functions,
 but functions often allow you to scale up your operations (from 1 to millions)
 
-"""
+NumPy was named from Numeric Python. It has almost all the math functions you'll ever need. 
+https://www.datacamp.com/community/blog/python-numpy-cheat-sheet
 
 """
-Custom Functions
 
-You always define "def" a function FIRST.
-Then call/run it SECOND 
+import numpy as np
 
-In many Python projects, all the functions come first in a file, 
-and the main code that is executed comes at the end of a file.
-"""
+x = [1,5,-2,8,6]
 
-# calling a function before it is defined will fail
-# print('result =', bmi(1.62,55))
-
-def bmi(height, weight):
-    answer = weight / height**2
-    return answer
-
-print('result =', bmi(1.7, 55))
-print('result =', bmi(2.0, 120))
-
+print('value of x =', x)
 
 """
-EXERCISE
+See functions as little helpful tools
 
-1. write a function named add_and_square that will add together two values and square the result.
-2. apply this function to (45, 60)
+To find absolute value:
+    Instead of having to say, if a number is negative, then invert it.
+    Just use the in-built function np.abs(number)
+
 """
 
-# def add_and_square(a, b):
-#     # your code goes here
-#
-#
-# print('result =', )
+# print('absolute values of x =', np.abs(x))
+
+"""
+To find the sum:
+    Instead of having to write a+b+c+d+...
+    Just use np.sum(x)
+    
+And so on, for the different functions. Matrix math, geometry, etc.
+"""
+
+# print('sum of x is', np.sum(x))
+# print('median of x is', np.median(x))
+# print('25% quantile of x is', np.quantile(a=x, q=0.25))
+# print('75% quantile of x is', np.quantile(a=x, q=0.75))
+# print('sorted order of x is', np.sort(x))
+
 
 """
 Some useful functions on dataframes
@@ -88,3 +89,102 @@ len(object) --> get the length of object
 # print('mean of columns =\n', df.mean())
 # print('mean of rows = \n', df.mean(axis=1))
 
+
+"""
+EXERCISE 
+
+We will do an exercise on the oncotarget dataframe again.
+Copy your previous code to load the excel file into a dataframe.
+
+For each dataframe, just display the top five rows using .head(5)
+This conserves space while allowing you to check that the data is 
+stored correctly.
+
+1. on your slices of intensities, calculate the mean values for each row.
+2. calculate the ratios of mean intensities for parental/resistant
+3. calculate the logarithm base 2 of the means, using np.log2 <- Google numpy log2
+4. print out your answers.
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import pandas as pd
+# # pprint.pprint allows nicer printing of values
+# from pprint import pprint
+#
+# df = pd.read_excel('data/oncotarget_cut.xlsx', header=[0,1])
+# triplicates_parental = df.loc[:,'parental']
+# triplicates_resistant = df.loc[:,'resistant']
+#
+# means_parental = triplicates_parental.mean(axis=1)
+# means_resistant = triplicates_resistant.mean(axis=1)
+# ratio_of_means = means_parental/means_resistant
+# log2_ratio_of_means = np.log2(ratio_of_means)
+#
+# print('means of parental are:', means_parental.head(5))
+# print('means of resistant are:', means_resistant.head(5))
+# print('ratio of means are:', ratio_of_means.head(5))
+# print('log2 ratios are:', log2_ratio_of_means.head(5))
+
+"""
+Custom Function
+
+One of the HARDEST things to grasp about programming. Not absolutely
+necessary for our final exercise, but this is useful for those who
+want to progress further.
+
+This is useful when you want to do multiple steps,
+and you want to do it repeatedly. Instead of repeating
+your code 100 times, you just "call" the function 100 times.
+
+You always define "def" a function FIRST.
+Then call/run it SECOND 
+
+In many Python projects, all the functions come first in a file, 
+and the main code that is executed comes at the end of a file.
+"""
+
+# # calling a function before it is defined will fail
+# print('result =', bmi(1.62,55))
+
+# def bmi(height, weight):
+#     answer = weight / height**2
+#     return answer
+#
+# print('result =', bmi(1.7, 55))
+# print('result =', bmi(2.0, 120))
+
+
+"""
+EXERCISE
+
+1. write a function named add_and_square that will add together two values and square the result.
+2. apply this function to (45, 60)
+"""
+
+# def add_and_square(a, b):
+#     # your code goes here
+#
+#
+# # call your function here
+#
+# print('result =', )

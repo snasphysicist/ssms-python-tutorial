@@ -145,3 +145,50 @@ writer.save()
 Double click the file on the project navigator to the left and
 check if the file is what you expected.
 """
+
+"""
+EXERCISE
+
+1. import pandas and load the data/oncotarget_cut.xlsx file into a DataFrame
+    and "from pprint import pprint".
+2. check if the file loaded correctly by using df.head(1)
+to display the top row. Do you think it matches the excel file? Rectify it.
+3. examine the columns using list(df.columns)  
+4. slice out the triplicates of the parental cell and resistant cell intensities.
+
+SKBR3 proteomic reference:
+Creedon, H., Gómez-Cuadrado, L., Tarnauskaitė, Ž., Balla, J., Canel, M., MacLeod, K. G.,
+ … Brunton, V. G. (2016). Identification of novel pathways linking epithelial-to-mesenchymal 
+ transition with resistance to HER2-targeted therapy. Oncotarget, 7(10), 11539–11552. 
+ https://doi.org/10.18632/oncotarget.7317
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import pandas as pd
+# pprint.pprint allows nicer printing of values
+from pprint import pprint
+
+df = pd.read_excel('data/oncotarget_cut.xlsx', header=[0,1])
+
+print('df =\n', df)
+
+print('columns are:')
+pprint(list(df.columns))
+
+print('triplicates of parental line are:\n', df.loc[:, 'parental'].head(5))
+print('triplicates of resistant line are:\n', df.loc[:, 'parental'].head(5))
