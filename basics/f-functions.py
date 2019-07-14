@@ -61,7 +61,7 @@ And so on, for the different functions. Matrix math, geometry, etc.
 
 
 """
-Some useful functions on dataframes
+Some useful functions on dataframes.
 
 (aren't you happy someone else coded these for you?)
 

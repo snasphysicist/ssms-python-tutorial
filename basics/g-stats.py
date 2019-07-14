@@ -94,7 +94,7 @@ variables.
 """
 IT'S DIFFICULT! ARE YOU STILL ALIVE??
 
-EXERCISE
+EXERCISE 1
 
 1. Apply the one-way ANOVA (t-test) to multiple groups
 
@@ -117,7 +117,7 @@ Note that f_oneway works on columns not rows, so we have to
 # print('p-values for proteins are', pvalue)
 
 """
-EXERCISE 
+EXERCISE 2
 
 1. Apply the one-way anova to the oncotarget intensities to obtain
     a list of p-values
@@ -176,8 +176,19 @@ print('example of before and after FDR =', round(pvalues[0],5), '<vs>', round(pv
 """
 Turns out that even with the FDR correction, most of the hits are still significant.
 
-
 Now you know how to do the t-test and FDR correction!
+
+"""
+
+"""
+EXERCISE 3
+
+Add the code for p-values and log2 meanratios to your answer
+and check if they work.
+create new columns containing these values in your dataframe. 
+"""
+
+"""
 
 
 Take a break and review your notes.
@@ -188,9 +199,6 @@ Use excel to make sure you've got the right columns:
     protein/analyte intensities
     two conditions
     
-
-
-We will spend 10 minutes trying to import 
 """
 
 

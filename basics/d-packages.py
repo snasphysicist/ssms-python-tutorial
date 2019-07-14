@@ -7,7 +7,7 @@ Intelligent people have created open source packages that you can use.
 
 Go to "Terminal" and type in "pip install " followed by your package of interest
 
->pip install pandas
+>pip install pandas xlrd 
 
 once completed, you can import this pandas package using an "import statement"
 the "as" statement creates an alias for the package to a name you choose.

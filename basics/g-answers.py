@@ -43,3 +43,11 @@ print('means of parental are:', means_parental.head(5))
 print('means of resistant are:', means_resistant.head(5))
 print('ratio of means are:', ratio_of_means.head(5))
 print('log2 ratios are:', log2_ratio_of_means.head(5))
+
+"""
+************************
+EXERCISE 3
+"""
+
+df['pvalues'] = pvalue
+df['log2ratios'] = log2_ratio_of_means
