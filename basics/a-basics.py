@@ -6,6 +6,16 @@ use CTRL+/ to uncomment the block
 """
 
 """
+ORIENTATION TO THE WORKSPACE
+
+1. project browser
+2. editor window
+3. how to create a new Python file
+4. how to run a Python file (r-click Run)
+"""
+
+
+"""
 to display something in the output console, use print()
 """
 

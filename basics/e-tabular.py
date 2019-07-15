@@ -30,13 +30,13 @@ A slice is defined by integers specifying rows and columns.
 Use the .loc[row name, column name] or .iloc[row number, column number]
 """
 
-print('\na single value:', df.loc[1, 'names'])
-print('\nalternative way of getting single value:', df.iloc[1,0])
-
-print('\na column slice:\n', df.loc[:,'age'])
-print('\nalternative way to slice a column\n',df.iloc[:,1])
-
-print('\nmultiple columns:\n', df.loc[[0,1],['names', 'age']])
+# print('\na single value:', df.loc[1, 'names'])
+# print('\nalternative way of getting single value:', df.iloc[1,0])
+#
+# print('\na column slice:\n', df.loc[:,'age'])
+# print('\nalternative way to slice a column\n',df.iloc[:,1])
+#
+# print('\nmultiple columns:\n', df.loc[[0,1],['names', 'age']])
 
 """
 You can even add columns to the dataframe,
@@ -52,22 +52,20 @@ but the data you give it must have the same number of entries
 """
 you can do math operations on slices
 """
-print('\nmultiplying age by 2\n', df.loc[:,'age']*2)
-
-print('\nappending a string to the names\n', df.loc[:,'names'] + '_jones')
+# print('\nmultiplying age by 2\n', df.loc[:,'age']*2)
+#
+# print('\nappending a string to the names\n', df.loc[:,'names'] + '_jones')
 
 """
-EXERCISE
+EXERCISE 1
 
-1. calculate the BMI for these four people. BMI = weight(kg / height(m)**2
+1. calculate the BMI for these four people given below. BMI = weight(kg / height(m)**2
 2. add the BMI as a new column, called 'bmi'. I like keeping it lowercase 
 because it prevents typos.
 """
+# df.loc[:, 'height'] = [1.7, 1.5, 1.6, 1.8]
+# df.loc[:, 'weight'] = [70, 51, 58, 90]
 
-df.loc[:, 'height'] = [1.7, 1.5, 1.6, 1.8]
-df.loc[:, 'weight'] = [70, 51, 58, 90]
-
-print(df)
 
 """
 Advanced slicing
@@ -80,13 +78,13 @@ Applying a comparison operator == >= > < produces a True/False
 array. Each True/False corresponds to each item in the dataframe.
 """
 
-height = df.loc[:, 'height']
-
-print('\nheights are \n', height)
-
-those_above_threshold = (height > 1.6)
-
-print('\nthose above threshold =\n', those_above_threshold)
+# height = df.loc[:, 'height']
+#
+# print('\nheights are \n', height)
+#
+# those_above_threshold = (height > 1.6)
+#
+# print('\nthose above threshold =\n', those_above_threshold)
 
 """
 We can use this boolean array to slice the dataframe.
@@ -97,7 +95,7 @@ We will apply this boolean array to the rows (1st position),
 because we want to display the rows of those who were above the height. 
 """
 
-details_above_threshold = df.loc[those_above_threshold, :]
+# details_above_threshold = df.loc[those_above_threshold, :]
 
 print('\ndetails of those above threshold\n', details_above_threshold)
 
@@ -107,21 +105,22 @@ And you can keep slicing something until you get the info you want.
 
 Here, I will slice the slice. I shall use two columns to show you. 
 """
-
-slice_of_slice = df.loc[those_above_threshold, :].loc[:,'names']
-slice_of_slice2 = df.loc[those_above_threshold, :].loc[:,['names', 'age']]
-
-print('\nslice of slice:\n', slice_of_slice)
-print('\nslice of slice2:\n', slice_of_slice2)
+# first_slice    = df.loc[those_above_threshold, :]
+# slice_of_slice = df.loc[those_above_threshold, :].loc[:,'names']
+# slice_of_slice2 = df.loc[those_above_threshold, :].loc[:,['names', 'age']]
+#
+# print('\nslice of slice:\n', slice_of_slice)
+# print('\nslice of slice2:\n', slice_of_slice2)
 
 
 """
-EXERCISE
+EXERCISE 2
 
 1. try to slice out of df those with weight below ("<") 60 kg
 2. get the names of those who meet this criteria
 3. print out the names
 """
+
 
 """
 Saving your work
@@ -132,14 +131,14 @@ Do this by following the following structure.
 Recall that pd is pandas
 """
 
-# this opens the file you want to write to
-writer = pd.ExcelWriter('data/bmi_data.xlsx')
-
-# outputs the contents of df into the excel file you specified
-df.to_excel(writer)
-
-# save the excel file
-writer.save()
+# # this opens the file you want to write to
+# writer = pd.ExcelWriter('data/bmi_data.xlsx')
+#
+# # outputs the contents of df into the excel file you specified
+# df.to_excel(writer)
+#
+# # save the excel file
+# writer.save()
 
 """
 Double click the file on the project navigator to the left and
@@ -147,7 +146,7 @@ check if the file is what you expected.
 """
 
 """
-EXERCISE
+EXERCISE 3
 
 1. import pandas and load the data/oncotarget_cut.xlsx file into a DataFrame
     and "from pprint import pprint".
@@ -164,31 +163,3 @@ Creedon, H., Gómez-Cuadrado, L., Tarnauskaitė, Ž., Balla, J., Canel, M., MacL
 """
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import pandas as pd
-# pprint.pprint allows nicer printing of values
-from pprint import pprint
-
-df = pd.read_excel('data/oncotarget_cut.xlsx', header=[0,1])
-
-print('df =\n', df)
-
-print('columns are:')
-pprint(list(df.columns))
-
-print('triplicates of parental line are:\n', df.loc[:, 'parental'].head(5))
-print('triplicates of resistant line are:\n', df.loc[:, 'parental'].head(5))

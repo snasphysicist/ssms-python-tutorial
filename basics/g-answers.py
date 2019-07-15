@@ -1,4 +1,9 @@
 """
+Answers to Stats
+"""
+"""
+*******************
+EXERCISE 1
 """
 
 import pandas as pd
@@ -22,6 +27,10 @@ print('p-values for proteins are', pvalue)
 
 """
 *****************
+EXERCISE 2
+
+1. Apply the one-way anova to the oncotarget intensities to obtain
+    a list of p-values
 """
 
 
@@ -34,20 +43,35 @@ df = pd.read_excel('data/oncotarget_cut.xlsx', header=[0,1])
 triplicates_parental = df.loc[:,'parental']
 triplicates_resistant = df.loc[:,'resistant']
 
-means_parental = triplicates_parental.mean(axis=1)
-means_resistant = triplicates_resistant.mean(axis=1)
-ratio_of_means = means_parental/means_resistant
-log2_ratio_of_means = np.log2(ratio_of_means)
+test_statistic, oncotarget_pvalues = f_oneway(triplicates_parental.T,
+                              triplicates_resistant.T)
 
-print('means of parental are:', means_parental.head(5))
-print('means of resistant are:', means_resistant.head(5))
-print('ratio of means are:', ratio_of_means.head(5))
-print('log2 ratios are:', log2_ratio_of_means.head(5))
+print('\n\noncotarget p values are:\n', oncotarget_pvalues[:5], '\n\n')
 
 """
 ************************
 EXERCISE 3
 """
 
-df['pvalues'] = pvalue
+# do FDR
+reject_boolean_array, pvals_corrected, _, _ = \
+    multitest.multipletests(oncotarget_pvalues, alpha=0.05, method='fdr_bh')
+
+# calculate the means and the log2 ratio of means
+means_parental = triplicates_parental.mean(axis=1)
+means_resistant = triplicates_resistant.mean(axis=1)
+ratio_of_means = means_parental/means_resistant
+log2_ratio_of_means = np.log2(ratio_of_means)
+
+# check answers
+print('means of parental are:\n', means_parental.head(5))
+print('means of resistant are:\n', means_resistant.head(5))
+print('ratio of means are:\n', ratio_of_means.head(5))
+print('log2 ratios are:\n', log2_ratio_of_means.head(5))
+
+
+df['fdr_p_values'] = pvals_corrected
 df['log2ratios'] = log2_ratio_of_means
+
+print(df.head(1).T)
+

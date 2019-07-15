@@ -125,10 +125,6 @@ EXERCISE 2
 """
 
 
-
-
-
-
 """
 Multiple Hypothesis Correction
 
@@ -178,18 +174,15 @@ Turns out that even with the FDR correction, most of the hits are still signific
 
 Now you know how to do the t-test and FDR correction!
 
-"""
 
-"""
 EXERCISE 3
 
-Add the code for p-values and log2 meanratios to your answer
+1. Add the code for multiple hypotheses correction and log2 meanratios to your answer
 and check if they work.
-create new columns containing these values in your dataframe. 
+2. create new columns containing these values in your dataframe. 
 """
 
 """
-
 
 Take a break and review your notes.
 

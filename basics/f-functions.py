@@ -91,7 +91,7 @@ len(object) --> get the length of object
 
 
 """
-EXERCISE 
+EXERCISE 1
 
 We will do an exercise on the oncotarget dataframe again.
 Copy your previous code to load the excel file into a dataframe.
@@ -127,23 +127,7 @@ stored correctly.
 
 
 
-# import pandas as pd
-# # pprint.pprint allows nicer printing of values
-# from pprint import pprint
-#
-# df = pd.read_excel('data/oncotarget_cut.xlsx', header=[0,1])
-# triplicates_parental = df.loc[:,'parental']
-# triplicates_resistant = df.loc[:,'resistant']
-#
-# means_parental = triplicates_parental.mean(axis=1)
-# means_resistant = triplicates_resistant.mean(axis=1)
-# ratio_of_means = means_parental/means_resistant
-# log2_ratio_of_means = np.log2(ratio_of_means)
-#
-# print('means of parental are:', means_parental.head(5))
-# print('means of resistant are:', means_resistant.head(5))
-# print('ratio of means are:', ratio_of_means.head(5))
-# print('log2 ratios are:', log2_ratio_of_means.head(5))
+
 
 """
 Custom Function
@@ -175,16 +159,9 @@ and the main code that is executed comes at the end of a file.
 
 
 """
-EXERCISE
+EXERCISE 2 - Custom Functions
 
 1. write a function named add_and_square that will add together two values and square the result.
 2. apply this function to (45, 60)
 """
 
-# def add_and_square(a, b):
-#     # your code goes here
-#
-#
-# # call your function here
-#
-# print('result =', )

@@ -68,7 +68,7 @@ p.show()
 
 
 """
-EXERCISE
+EXERCISE 1
 
 We are going to do a volcano plot of the oncotarget proteins.
 
@@ -78,7 +78,9 @@ y-axis: negative log10 of p-values
 
 You previously calculated the log2 ratios of means on the oncotarget dataset.
 You also calculated the p-values. But you'll need to turn these into 
--log10(p-value) 
+-log10(p-value).
+
+GO BACK TO THE SCRIPT WITH YOUR ANSWER TO THE STATS TUTORIAL! 
 
 1. proceed to add a new column containing the -log10(p-values)
 2. create a plot and add a scatter using the log2 mean and -log10(p-values)
