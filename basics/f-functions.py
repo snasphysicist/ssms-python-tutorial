@@ -110,25 +110,6 @@ stored correctly.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 """
 Custom Function
 

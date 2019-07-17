@@ -75,3 +75,6 @@ df['log2ratios'] = log2_ratio_of_means
 
 print(df.head(1).T)
 
+writer = pd.ExcelWriter('data/oncotarget_pvals2.xlsx')
+df.to_excel(writer)
+writer.save()

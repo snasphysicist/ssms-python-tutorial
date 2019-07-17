@@ -5,16 +5,17 @@ Tutorial 2 - variables and types
 """
 Variables are containers that you use to store data/values
 The variable only comes into existence when you FIRST assign a value
-You need to define the value of a variable before you ask the computer to use the variable
+You need to define the value of a variable before you ask the computer 
+to use the variable
 
 See how we correct the error below
 """
 
 my_first_variable = 1
-
+#
 my_first_variable = my_first_variable + 5
-
-print('my first variable is' ,my_first_variable)
+#
+print('my first variable is', my_first_variable)
 
 
 
@@ -48,19 +49,20 @@ Python does math ok with a mix of integers and floats
 print('\naddition = ', i + f)
 
 """
-but often you cannot interchange int and float 
+but often you cannot interchange int and float
 when feeding data into a program!
 
-e.g. the round function takes in two arguments, 
+e.g. the round function takes in two arguments,
 1. the value to be rounded
 2. the number of decimal places
 
-Logic tells you that you cannot specify a fraction for the number of decimal places!
+Logic tells you that you cannot specify a fraction for the 
+number of decimal places!
 """
 
-# rounded_result = round(10.123456, 4)
-#
-# print('\nrounded result = ', rounded_result)
+rounded_result = round(10.123456, 4)
+
+print('\nrounded result = ', rounded_result)
 
 # rounded_result = round(10.123456, 4.0)
 #
@@ -96,7 +98,7 @@ print('\n example of a string = ', s4, type(s4))
 
 blank = ''
 
-# print('\n example of a blank string = ', blank)
+print('\n example of a blank string = ', blank)
 
 """
 You can "add" strings together
@@ -104,7 +106,7 @@ You can "add" strings together
 
 joined_string = s1 + 'with another string joined'
 
-print('\n example of adding strings = ', joined_string, type(joined_string))
+print('\n example of adding strings = ', joined_string)
 
 """
 Be careful with the spaces!
@@ -113,7 +115,7 @@ Be careful with the spaces!
 """
 BOOLEAN
 
-This data type makes it really efficient to compare different values. 
+This data type makes it really efficient to compare different values.
 Either True or False
 
 the double equals "==" is used to compare between two objects
@@ -126,15 +128,15 @@ boolean_variable = True
 boolean_variable = False
 
 print ('\nboolean variable: ', boolean_variable, type(boolean_variable))
-
+#
 x = 1
 bool_comparison = x == 1
-
-print ('\nbool comparison to a correct value: ', bool_comparison, type(bool_comparison))
-
+#
+print ('\nbool comparison to a correct value: ', bool_comparison)
+#
 bool_comparison = x == 'some text'
 
-print ('\nbool comparison to a wrong value: ', bool_comparison, type(bool_comparison))
+print ('\nbool comparison to a wrong value: ', bool_comparison)
 
 """
 EXERCISE
@@ -142,14 +144,21 @@ EXERCISE
 1. define a variable (name it what you want) and give it a value of 100.0
 2. add 50 to the variable (hint: x = x + 1)
 3. multiply by 2.5 (hint: use * )
-4. divide by 3.1
+4. divide by 3.1 (hint: use / for divide)
 5. print the variable out and check its type
 
 6. define a second variable and give it a value of 'omics is awesome'
 7. to this, add a string of ' and fun too!'
-8. print out the variable to check your answer 
+8. print out the variable to check your answer
 
 """
+new_var = 100.0
+new_var = new_var + 50
+new_var = new_var * 2.5 / 3.1
+print(new_var)
 
-# new_var =
-# new_var = new_var +
+t = 'omics is awesome'
+t = t + ' and fun too!'
+
+print(t)
+
