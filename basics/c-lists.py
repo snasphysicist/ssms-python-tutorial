@@ -36,8 +36,10 @@ NOTE: in Python, virtually all list indexes start from zero!
 i.e., 0, 1, 2, 3,...
 Not 1, 2, 3,...
 
-List size has a maximum (of 5 million). If large number of 
-items, use a numpy array.
+The size of a list is limited only by the amount of
+physical memory (RAM) available to Python. 
+
+If large number of items, use a numpy array.
 """
 
 print(mylist[0])   # prints 1
