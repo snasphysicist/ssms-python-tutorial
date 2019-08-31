@@ -22,7 +22,7 @@ mylist.append(6.4)
 #
 print('mylist =', mylist)
 #
-mylist2 = [1,'two', True, 6.4]
+mylist2 = [1, 'two', True, 6.4]
 
 print('mylist2 =', mylist2)
 
@@ -40,9 +40,9 @@ List size has a maximum (of 5 million). If large number of
 items, use a numpy array.
 """
 
-print(mylist[0]) # prints 1
-print(mylist[1]) # prints 2
-print(mylist[2]) # prints 3
+print(mylist[0])   # prints 1
+print(mylist[1])   # prints 2
+print(mylist[2])   # prints 3
 
 """
 FOR LOOPS
@@ -120,11 +120,11 @@ the same way. Indexing is the technical term for getting
 a specific item out of a container/list.
 """
 
-x=10
-y=20
-z=30
+x = 10
+y = 20
+z = 30
 
-variable_list = [x,y,z]
+variable_list = [x, y, z]
 #
 print('\nvariable list = ', variable_list)
 #
@@ -142,7 +142,7 @@ E.g. If you ask a list to give you its 10th value, but the
 list only has 3 values, it will fail.
 """
 
-mylist3 = [1,2,3]
+mylist3 = [1, 2, 3]
 #
 # print('Attempting to get the 10th value...')
 # print('tenth value is', mylist3[10])
