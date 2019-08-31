@@ -31,7 +31,7 @@ import pandas as pd
 This statement means that you can access pandas using the abbreviation "pd".
 
 Pandas has an in-built Type called DataFrame. 
-This is Excel on steriods, as we will see.
+This is Excel on steroids, as we will see.
 """
 
 import pandas as pd
