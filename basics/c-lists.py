@@ -9,7 +9,7 @@ Objects include such things as variables, numbers, strings, even functions!
 Why put things into a list?
 - can refer to things all at once, instead of one by one
 - can iterate, ie. cycle through the list from start to finish
-- you can extend the list without haivng to define new variables  
+- you can extend the list without having to define new variables  
 
 the append function takes only one item at a time.
 """
